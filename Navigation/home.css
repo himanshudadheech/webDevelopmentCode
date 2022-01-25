@@ -1,0 +1,129 @@
+*{
+    margin:0;
+
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+nav{
+    display: flex;
+    background-image: linear-gradient(to right,#504a4a, #000000);   height: 80px;
+/* Vertically centre mai lane k liye aligin item */
+   align-items: center; 
+   justify-content: space-between;
+   padding: 0px 50px 0px 100px;
+}
+nav .logo{
+    font-size: 23px;
+    color: #f78f3f;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+   
+
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+ 
+    padding:  8px 10px;
+  /* transition use krte hai smooth ness k liye */
+  transition: all 0.3s ease-in;
+  border-radius: 15px 2px 15px 2px;
+}
+
+nav ul li a:hover{
+    color: white;
+  background-color: #e23636;
+   
+    border-radius: 15px 2px 15px 2px;
+}
+
+
+nav ul li a.active{
+    color: white;
+    background-color: #e23636;
+     
+      border-radius: 5px;
+  }
+  nav .menu-button i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+#click:checked ~ .menu-button i::before{
+    content: "\f00d";
+
+}
+  /* Responsive banne ka code */
+
+  @media(max-width:940px){
+      nav ul{
+          position: fixed;
+          top: 80px;
+          background: #000000;
+          height: 100vh;
+          width: 100%;
+          display: block;
+          /* Left mai slide krne k liye */
+          left: -100%;
+          text-align: center;
+          transition: all 0.3 ease;
+      }
+      /* check box menu pr click hone pr code */
+      #click:checked ~ ul{
+          left: 0%;
+      }
+      #click:checked ~ .menu-button i::before{
+        content: "\f00d";
+
+    }
+      /* --------------- */
+
+
+      nav ul li{
+          margin-top: 40px;
+         
+      }
+
+      nav ul li a{
+          font-size: 20px ;
+          display: inline;
+           
+      }
+      nav ul li a:hover{
+        color: #e23636;
+     background: none;
+        
+    }
+    
+    
+    nav ul li a.active{
+        color: #e23636;
+       background: none;
+         
+        
+      }
+      nav .menu-button i{
+        color: white;
+        font-size: 20px;
+        display: block;
+        cursor: pointer;
+    }
+ 
+
+
+    }
+  
